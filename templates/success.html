@@ -1,0 +1,30 @@
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Friends</title>
+      
+    </head>
+
+    <style>
+        p {
+            margin: 0px 0px 0px 0px;
+        }
+
+        h4 {
+            margin-bottom: 0px;
+        }
+    </style>
+    <body>
+      <h2>Success!</h2>
+      <p>The email address you entered is valid. Thank you! </p>
+
+      <h4><u>Email Addresses Entered:</u></h4>
+      {% for entry in all_emails: %}
+         <p>{{ entry['email'] }} {{ entry['created_at'] }} </p>
+      {% endfor %}
+
+      
+    </body>
+</html>
